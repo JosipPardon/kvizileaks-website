@@ -1,7 +1,3 @@
-window.onload = function() {
-  document.body.style.display = "block"; //kada se sve učita, da se prikaže body
-};
-
 window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
 
@@ -50,7 +46,7 @@ window.addEventListener("load", (event) => {
      
   }, 1000/144);   
   
-
+  document.body.style.display = "block"; //kada se sve učita, da se prikaže body
 });
 
 
