@@ -1,0 +1,46 @@
+[x] dodaj da se u pozadini vrte videi kao vlak (nekak pomocu inline elementa sa absolute position - i onda mu sporo smanjujes x)
+[x] naprvi da se image slideshow beskonačno vrti ulijevo
+[ ] rjesi one crte koje se pojavljuju kod zig zag linije za neke velicine keranas - mislim da to ima veze sa losim zaokruzivanjem: 50%/51.96px
+    - imas ovdje detaljni racun pa mozes skuzit: https://css-tricks.com/css-borders-using-masks/
+[ ] napravi da su sve linije poravnate onako (tj da je desna granica i lijeva granica svih elemenata ista)
+[ ] pogledaj angelin ono gradivo o dizajnu
+[ ] kada naprviš stranicu i staviš ju na internet, posalji ju spoznoriima i pitaj ih na koji način želiš da ih izreklamiraš
+stranice za dodati: unajmi nas, partneri (gdje staviš masnu reklamu), galerija
+[ ] napravi animiarni accordion i animirani navbar (kad stisneš, da se animirano spusti)
+[x] sazetak turnira u najboludoj ideji: napravi horizontalni scroll: https://datatables.net/examples/basic_init/scroll_x.html
+[x] dodaj negdje da se osvajaju nagrade na kvizovima
+[x] makni da nije plava strelica u onom gumbu accordiona kada se stisne
+[x] dodaj da se jače vidi koji je gumb u navbaru stisnut
+[ ] dodaj da je bilo i miješanje ekipa
+[x] rješiti da text o-nama ne bude toliko uzak na mobu
+[x] promijeniti order elemenata srednje osobe prilkom resizeanja
+[ ] više snimki/slika i manje teksta na početnoj stranici za sve one aktivnosti
+[ ] probaj odzumirat na o-nama => skuzit ces da ne valja
+[ ] probaj odzumirat na pocetna/mini-eventi-tijekom-pauza => skuzit da snimke nisu centrirane i jedanke velicine
+[x] napravi da ništa ne prikaže dok se sve ne učita
+
+
+https://codepen.io/cobra_winfrey/pen/zYKGePx?editors=1100
+https://ianlunn.github.io/Hover/#effects
+
+za compressanje videa bez gubitka:
+https://videocandy.com/compress-video.html
+
+https://imagecompressor.com/
+
+custom domain:
+https://www.youtube.com/watch?v=mPGi1IHQxFM&ab_channel=ProgrammingKnowledge
+pogledaj relevante dijelove ovog videa: https://www.youtube.com/watch?v=p1QU3kLFPdg&ab_channel=SuperSimpleDev
+show: https://www.namecheap.com/support/knowledgebase/article.aspx/10446/2208/how-do-i-link-my-domain-to-gitlab-pages/?gclid=CjwKCAiA_6yfBhBNEiwAkmXy57B4HgDUi5QHVMM-yQpbUCdM1kNohzhrIaMtvhx8wu_bJ55LIzlPlhoC4gAQAvD_BwE
+
+
+
+za hosting => 
+- https://mydataknox.com/hr/web-hosting/web-hosting-paketi?gclid=CjwKCAiAuaKfBhBtEiwAht6H73rQLN_myvHnXmdAM9HDqh2q7AxlhzUEAt9wHUyzkvHpfr8YB7nDYhoCFKgQAvD_BwE
+    - mislim da ovo ispadne oko 130 kn godisnje za kvizileaks.com.hr
+
+https://www.infonet.hr/shopping-cart
+    - 6,64 + 17,91 po godini za kvizileaks.com.hr
+
+https://www.studio4web.com/shopping-cart
+    - 15,26 eura po godini za kvizileaks.com.hr

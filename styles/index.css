@@ -1,0 +1,360 @@
+/*OPCENITO:*/
+.zigzag-bottom {
+  /*https://css-tricks.com/css-borders-using-masks/  size=15, angle=120deg*/
+  --mask: conic-gradient(from -60deg at bottom, #0000, #000 0deg 120deg, #0000 120deg) 50%/51.96px 100%;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  /*border-style: solid;
+  border-width: 4px;*/
+  clip-path: inset(0 0 0.3px 0); /*https://css-tricks.com/clipping-masking-css/*/
+}
+
+.zigzag-top {
+  /*https://css-tricks.com/css-borders-using-masks/  size=15, angle=120deg*/
+  --mask: conic-gradient(from 120deg at top, #0000, #000 1deg 119deg, #0000 120deg) 50%/51.96px 100%;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  clip-path: inset(0.5px 0 0 0);
+}
+
+
+.zigzag-top-bottom{
+  --mask: 
+    conic-gradient(from 120deg at top,#0000,#000 1deg 119deg,#0000 120deg) top/51.96px 51% repeat-x,
+    conic-gradient(from -60deg at bottom,#0000,#000 1deg 119deg,#0000 120deg) bottom/51.96px 51% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  clip-path: inset(0.3px 0 0.3px 0);
+}
+
+
+html, body { /*ovo nam treba da zbog animiranog slideshowa => jer inace stvori horziontalnu scroll liniju*/
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+  display: none; /*zelimo da nije nista prikazano u pocetku => ovo ce javascript maknut kada se sve učita*/
+}
+
+.hidden {
+  display: none;
+}
+
+.text-align-justify {
+  text-align: justify;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/*----------------------------------------------------------------*/
+
+
+
+.navbar {
+  background-color: #F6C90E;
+  z-index: 100;
+}
+
+.navbar-brand, .navbar {
+  font-size: 25px;
+}
+
+.nav-link {
+  color: black;
+}
+
+
+/*effekti hovera na nav link*/
+/* Hang */
+@-webkit-keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@-webkit-keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+.hvr-hang {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-hang:hover/* .hvr-hang:focus, .hvr-hang:active*/ {
+  -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+/*/////////////////////////////////////*/
+
+
+
+
+
+.active {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  margin: 10px 0 19px;
+}
+
+.navbar-collapse.collapse.show {
+  margin-bottom: 20px;
+}
+
+.background-zig-zag {
+  z-index: -1;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  position: relative;
+  bottom: 42.5px;
+  margin-bottom: -100px;
+  /* ovo još povuče ovo odozdo prema gore*/
+}
+
+
+
+#najava {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 500px) {
+  #najava {
+    font-size: 22px;
+  }
+}
+
+#interaktivni-kviz {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 65px;
+  transform: rotate(-15deg);
+  animation-name: colorChange;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media only screen and (max-width: 500px) {
+  #interaktivni-kviz {
+    font-size: 40px;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #F6C90E;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.media-slideshow-container {
+  position: absolute;
+  top: -30px;
+  z-index: -2;
+  display: flex;
+  overflow: visible;
+  opacity: 0.3;
+}
+
+.video {
+  position: absolute;
+  height: 515px;
+  float: left;
+  filter: grayscale();
+}
+
+
+
+.container-tamni {
+  background-color: #121212;
+  color: #EEEEEE;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  
+}
+
+.nagrade {
+  text-align: center;
+}
+.animate-character
+{
+  background-image: linear-gradient(
+    -225deg,
+    yellow 0%,
+    red 33.3333%,
+    blue 66.6666%,
+    yellow 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+.fs-2 {
+  color: #F6C90E;
+}
+
+.fs-2+p {
+  text-align: justify;
+}
+
+.container-svjetli {
+  background-color: white;
+  color: #121212;
+  width: 100%;
+  padding: 50px 100px 100px;
+}
+
+@media only screen and (max-width: 800px) {
+  .container-svjetli {
+    padding: 50px 20px 100px;
+  }
+}
+    
+.accordion-button, .accordion-button:not(.collapsed), .accordion-button::after {
+  background-color: #F6C90E;
+  color: black;
+}
+.accordion-button:not(.collapsed)::after{background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+
+.accordion-item {
+  border-width: 3px;
+  border-color: transparent;
+}
+
+.containerAccordion {
+  padding-bottom: 50px;
+}
+@media only screen and (min-width: 600px) {
+  .containerAccordion {
+    
+  }
+}
+@media only screen and (min-width: 800px) {
+  .containerAccordion {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .containerAccordion {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+
+
+
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.scrolling-wrapper > .figure {
+  width: 2000px;
+}
+
+.karta-moci-holder {
+  display: flex;
+  justify-content: center;
+}
+.karta-moci {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .karta-moci {
+    width: 62.5%;
+  }
+}
+@media only screen and (max-width: 668px) {
+  .karta-moci {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .karta-moci {
+    width: 100%;
+  }
+}
+
+
+
+.myFooter {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 50px;
+  padding-bottom: 25px;
+  background-color: #121212;
+}
+

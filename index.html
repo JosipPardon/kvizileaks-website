@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kvizileaks</title>
+  <link rel="icon" href="images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/f38a390824.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/o-nama.css">
+  <link rel="stylesheet" href="styles/kontakt-i-informacije.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md zigzag-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="images/logo.png" alt="Bootstrap" onclick="changePage('pocetna')">
+      </a>
+      <a class="navbar-brand" href="#" onclick="changePage('pocetna')">Kvizileaks</a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="collapseNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link hvr-hang active" aria-current="page" href="#" id="link_pocetna" onclick="changePage('pocetna')">Početna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-hang" aria-current="page" href="#" id="link_o-nama" onclick="changePage('o-nama')">O nama</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-hang" aria-current="page" href="#" id="link_kontakt-i-informacije" onclick="changePage('kontakt-i-informacije')">Kontakt i informacije</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="background-zig-zag zigzag-bottom"></div>
+
+  <div class="page-container" id="pocetna">
+
+    <div style="position: relative">
+      <div class="media-slideshow-container">
+        <video autoplay muted loop class="video" id="1">
+          <source src="videos/slideshow/1.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="video" id="2">
+          <source src="videos/slideshow/5.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="video" id="3">
+          <source src="videos/slideshow/2.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="video" id="4">
+          <source src="videos/slideshow/3.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="video" id="5">
+          <source src="videos/slideshow/6.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="video" id="6">
+          <source src="videos/slideshow/4.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <div class="px-4 py-5 my-5 text-center" id="heading-container">
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4" id="najava">Dosadili su ti regularni pub kvizovi? <br> Ajmo malo zapaprit! Predstavljamo....</p>
+        </div>
+        <h1 class="display-5 fw-bold" id="interaktivni-kviz">INTERAKTIVNI KVIZ</h1>
+      </div>
+
+    </div>
+
+    <div class="container-fluid container-tamni zigzag-top-bottom">
+      <div class="container px-4 py-5 " id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Interaktivni kviz je jedinstvena kombinacija...</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fs-2"><i class="fa-solid fa-champagne-glasses"></i> Tuluma</h3>
+              <p> 
+                Na našim kvizovima puštamo samo najjače pjesme.
+                Također, neizostavan element svakog tuluma je i cuganje - razni mini eventi u kojima se mora cugati ili u kojima se osvaja cuga dodaju papra svemu tome.
+              </p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fs-2"><i class="fa-solid fa-microphone"></i> Show eventa</h3>
+              <p>
+                Pub kvizovi su samo nizanje pitanja.
+                Zar ne bi bilo bolje kada bi u to još bio ubačen npr. turnir u stand up komediji? 
+                Ili natjecanje u kušanju ljute hrane? 
+                Naravno da bi!
+                Zato u kviz konstantno ubacujemo i smišljamo neke zabavne mini-evente! 
+              </p>
+            
+              </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fs-2"><i class="fa-solid fa-beer-mug-empty"></i> Zabavnog pub kviza</h3>
+              <p>
+                Ne volimo pub kvizove sa hrpom dugačkih i preozbiljnih pitanja. 
+                Kod nas su pitanja mrvicu lakša (ali ne prelagana) i s ciljem da budu što zabavnija. 
+                Također, imamo i interaktivna pitanja - pročitaj dolje što su ona :)
+              </p>
+            </div>
+          </div>
+        </div>
+        <h2 class="nagrade">Najpametnije ekipe osvajaju <span class="animate-character">nagrade</span>, ali i najkreativnije i najhrabrije!</h2>
+      </div>
+    </div>
+
+    <div class="container-fluid container-svjetli containerAccordion zigzag-top">
+      <h1>Neobične stvari koje su dosad bile na našim kvizovima:</h1>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              <strong>Interaktivna i inovativna pitanja</strong>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body text-align-justify">
+              Interaktivna pitanja su ona u čijem stvaranju sudjeluje neka od ekipa na kvizu. Na primjer:
+              <br>
+              <p></p> <!-- ovo je za razmak --> 
+              <p>
+                <strong>Pitanje u kojem jedna ekipa crta</strong>
+                Jedna ekipa crta po tabletu, a ostale gledajući ekrane televizora pogađaju o čemu je riječ.
+              </p>
+              <p>
+                <strong>Pitanje kojeg smišlja jedna ekipa</strong>
+                U svakom kvizu imamo određeni broj pitanja kojeg smišlja jedna od ekipa na kvizu - ako premalo ili previše ostalih ekipa točno odgovori na pitanje dobiju 0 bodova, a 1 bod dobiju ako je pitanje dobro balansirano.
+              </p>
+              Uz interaktivna pitanja, na kvizu još imamo neke inovativne koncepte pitanja poput pogađanja začina (svaka ekipa dobije vrečicu začina te mora po mirisu i okusu pogoditi začin). 
+              Ostale koncepte pitanja koje imamo ćemo ti prepustiti da otkriješ na nekom od naših kvizova :)
+              <hr>
+              Konstantno smišljamo nove koncepte pitanja i unaprijeđujemo stare!
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              <strong>Mini eventi tijekom pauza</strong>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body text-align-justify">
+              Dosadno je čekati dok se ispravljaju listići sa odgovorima, zato za vrijeme ispravljanja odnosno pauza održavamo razne mini evente i natjecanja u kojima pobjednik osvaja neku nagradu!
+              Evo primjera koji su bili dosad:
+              <p></p> <!-- ovo je za razmak --> 
+              <p>
+                <strong>Natjecanje u stand up-u</strong> 
+                Pravila su vrlo jednostavna. 
+                Svako tko želi dođe na pozornicu i održi kratki nastup u kojem nastoji nasmijati publiku (to najčešće bude pričanje vica).
+                Kada svi nastupi završe, publika glasa i odabire se osoba koja je bila nasmješnija - njezina ekipa osvaja rundu cuge!
+                <div class="container-fluid text-align-center">
+                  
+                  <div class="container-fluid text-align-center">
+                    <div class="row">
+                      <div class="col-sm">
+                        <video autoplay muted loop class="figure-img img-fluid rounded">
+                          <source src="videos/slideshow/3.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="col-sm">
+                        <video autoplay muted loop class="figure-img img-fluid rounded">
+                          <source src="videos/slideshow/6.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <figcaption class="figure-caption">Sasvim očekivano, Dalmatinci su dosad bili najčešći pobjednici u ovome.</figcaption>
+              
+                </div>
+              </p>
+              
+              <p>
+                <strong>Natjecanje u jedenju ljutih umaka</strong> 
+                Dobrovoljci se popnu na pozornicu te pojedu prvu dozu hrane ukrašene ljutim umacima. 
+                Zatim sljedi kratki podcast/razgovor sa natjecateljima - tko tijekom toga napravi grimasu ili pokaže neke znakove nelagode, ispada! 
+                Poslije prve faze, ide druga faza kušanja hrane, ali ovog puta sa jačim umacima, te druga runda podcasta. 
+                Sve se ponavlja ukrug dok ne ostane samo jedna osoba - ona ili njezina ekipa osvaja neku nagradu.
+              </p>
+              <p>
+                <strong>Natjecanje u udvaranju</strong> 
+                Ovo je bilo baš za najhrabrije. 
+                Jedna od cura iz publike se popela na pozornicu (naravno, dobrovoljno, natjecao se tko je htio). 
+                Ona je automatski osvojila nagradu - bez da je išta morala raditi. 
+                Zatim su dolazili muški dobrovoljci i udvarali se te je na kraju publika glasala za najboljeg/najsmješnijeg udvarača. 
+                Pobjednik je osvojio nagradu!
+                
+              </p>
+              <p>
+                <strong>Natjecanje u obaranju ruke</strong> 
+                Pravila su i ovdje vrlo jednostavna. Dvojica najjačih ili slučajno izabranih dođe do borbenog stola, nakon ćega svaka ekipa koja se želi kladiti stavi okladu na jednog od sudionika - ako su pogodili točno, dobiju +1 dob, a inače -1.
+                <div class="container-fluid text-align-center">
+                  <figure class="figure">  
+                    <video autoplay muted loop class="figure-img img-fluid rounded">
+                      <source src="videos/slideshow/4.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+                
+              </p>
+              <p>
+                <strong>Ne zaboravi stihove</strong> 
+                Voditelj započne pjevati te u jednom trenutku prekine - tko prvi iz publike nastavi stihove, osvoji rundu najskuplje cuge u kafiću.
+              </p>
+              <p>
+                <strong>Turnir u Aliasu</strong> 
+                Svaka od ekipa na kvizu smisli jedan pojam. 4 Dobrovoljca se popnu na pozornicu, a voditelj objašnjava pojam po pojam. Osoba sa najviše pogođenih pojmova, osvaja nagradu.
+              </p>
+              <p>
+                <strong>Natjecanje u cuganju</strong> 
+                Nema se što tu puno pričati: tko prvi popije, osvaja nagradu! 
+                <div class="container-fluid text-align-center">
+                  <figure class="figure">  
+                    <video autoplay muted loop class="figure-img img-fluid rounded">
+                      <source src="videos/slideshow/5.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </p>
+              <p>
+                <strong>Naručivanje pizze uz neki izazov</strong> 
+                Prije svega spojimo mobitel na razglas. Zatim se dobrovoljac iz publike popne na pozornicu, nazove pizzeriu i naručuje pizzu. 
+                Pizzu osvaja njegova ekipa ako tijekom tog razgovora uspije ispuniti neki izazov, a inače se dodjeljuje nasumičnoj ekipi. Primjeri izazova koji su bili:
+                <ul>
+                  <li>Naručitelj mora naručiti miješanu pizzu / capricossu, ali se ne smije izgovoriti riječi "pizza", "šunka", "sir", "gljive", "mješana" i "capricosa" tijekom razgovora s pizzeriom.</li>
+                  <li>Tijekom razgovora s pizzeriom naručitelj mora postići da mu osoba sa druge strane telefona objasni kada su dinosauri izumrli.</li>
+                  <li>Naručitelj mora tijekom razgovora dati barem 3 komplimenta osobi koja se javila.</li>
+                  <li>Naručitelj se mora praviti da sjedi na WC-u i da je baš jako zapelo.</li>
+                </ul>
+              </p>
+              <p>
+                <strong>Tko ima najbolje ime?</strong> 
+                Naravno, svaka ekipa si mora prije početka kviza smisliti ime. Redovito radimo natjecanje koja ekipa je smisila najbolje i nagrađujemo ju! Sve to radimo preko online glasanja prisutnih na kvizu.
+              </p>
+              <hr>
+              <p>
+                Konstantno smišljamo nove mini-evente i unaprijeđujemo stare!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              <strong>Natjecanje u smišljanju ludih ideja</strong>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body text-align-justify">
+              Naravno, 100 glava pametnije od 3. Zato smo održali instagram turnir u smišljanju ideja kako kviz možemo učiniti još zabavnijim i luđim. 
+              Svako tko je imao neku ideju nam se javio i predložio ju, a zatim su naši pratitelji na instagramu glasali između svake ideje - ona koja je osvojila više glasova, prošla je u sljedeću fazu turnira!
+              Evo sažetka:
+              <div class="scrolling-wrapper">
+                <figure class="figure">
+                  <img src="images/sazetak-turnira-export.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                  <figcaption class="figure-caption">Swipe right</figcaption>
+                </figure>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+              <strong>Karte s raznim moćima</strong>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+            <div class="accordion-body text-align-justify">
+              Svaku ekipu ispod stola je dočekala nasumična karta sa nekom moći, koje su se onda mogle iskoristiti tijekom kviza. Evo dva primjera:
+              <p></p>
+              <div class="container-fluid text-align-center">
+                <div class="row">
+                  <div class="col-md karta-moci-holder">
+                    <figure class="figure">
+                      <img src="images/veto.jpg" class="figure-img img-fluid rounded karta-moci">
+                    </figure>
+                  </div>
+                  <div class="col-md karta-moci-holder">
+                    <figure class="figure">
+                      <img src="images/joker.jpg" class="figure-img img-fluid rounded karta-moci">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+              <strong>Vesela atmosfera</strong>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+            <div class="accordion-body text-align-justify">
+              Iako je pub kviz baza svega ovoga, trudimo se prvenstveno staviti naglasak na zabavu i dobar provod - ne volimo surova dugačka pitanja koje ne bi ni wikipedija znala odgovoriti. 
+              To ne znači da su pitanja prelagana, naravno he he.
+              <p></p>
+              <div class="container-fluid text-align-center">
+                
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                      <video autoplay muted loop class="figure-img img-fluid rounded">
+                        <source src="videos/slideshow/1.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="col-sm">
+                      <video autoplay muted loop class="figure-img img-fluid rounded">
+                        <source src="videos/slideshow/2.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div> 
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-container hidden" id="o-nama">
+    <div class="container-fluid tko-smo-mi zigzag-bottom">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading text-white">Tko smo mi?</h1>
+          <p class="lead text-white">Mi smo troje mladih ljudi koji su voljeli ići na pub kvizove, ali su im ubrzo postali dosadni, pa su odlučili popraviti taj problem!</p>
+        </div>
+      </section>
+    </div>
+    
+    <div class="container-fluid cards-o-nama-container">
+
+      <div class="card person-card">
+        <div class="row no-gutters">
+            <div class="col-md-5">
+                <img class="card-img" src="images\crew\josip.jpg" alt="Suresh Dasari Card">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body person-card-body">
+                    <h5 class="card-title">Josip Pardon</h5>
+                    <p class="card-text"><small class="text-muted">tehnička podrška, vizualni dizajn, marketing, contact person, suvoditelj kvizova</small></p>
+                    <p class="card-text text-align-justify"> 
+                      Josip je tipičan lik koji voli isprobavati i učiti razne stvari - od gitare preko 2D animacije, stand up komedije, mađioničarskih trikova, programiranja igrica pa sve do izrade robota. 
+                      Nakon završene XV. gimnazije, upisao je FER na kojem se usmjerio u računarstvo.
+                      Ako ga sretnete, nemojte ga pitati jel se koljeno oporavilo i kada će se vratiti u nogomet, jer mu je tog pitanja već pun kufer. 
+                      Također, nemojte ga udariti po ramenu i reći "pardon, Pardon" - te fore mu je isto već pun kufer.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="card person-card">
+        <div class="row no-gutters"> 
+          <div class="col-md-7">
+              <div class="card-body person-card-body">
+                  <h5 class="card-title">Adrian Perić</h5>
+                  <p class="card-text"><small class="text-muted">Izrada kvizova, glavni voditelj kvizova</small></p>
+                  <p class="card-text text-align-justify">
+                    Završio je XV. Gimnaziju u Zagrebu gdje je i odrastao. 
+                    Dosadila mu je matematika pa se odlučio za Stomatološki fakultet u Zagrebu. 
+                    U slobodno vrijeme radi svakakve poslove te se uporno pokušava prijaviti na TV-kviz “Tko želi biti milijunaš”. 
+                    Voli dobro društvo, pivo i filmove!
+                  </p>
+              </div>
+          </div>
+          <div class="col-md-5 different-order-image">
+            <img class="card-img" src="images\crew\adrian.jpg" alt="Suresh Dasari Card">
+          </div>
+        </div>
+      </div>
+      <div class="card person-card">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img class="card-img" src="images\crew\stane.jpg" alt="Suresh Dasari Card">
+          </div>
+          <div class="col-md-7">
+              <div class="card-body person-card-body">
+                  <h5 class="card-title">Suresh Dasari</h5>
+                  <p class="card-text"><small class="text-muted">Izrada kvizova, tehnička podrška</small></p>
+                  <p class="card-text text-align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div class="page-container hidden" id="kontakt-i-informacije">
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+    
+      <main>
+        <h1>Informacije o događajima</h1>
+        <p class="fs-5 col-md-8 text-align-justify">
+          Informacije o svim našim kvizovima i eventima redovito objavljujemo na instagram stranici. 
+          Baci follow da ne propustiš nešto: 
+        </p>
+    
+        <div class="mb-5">
+          <a href="https://www.instagram.com/kvizileaks/" class="btn btn-dark btn-lg px-4"><i class="fa-brands fa-instagram"></i> kvizileaks</a>
+        </div>
+    
+        <hr>
+    
+        <div class="row g-5">
+          <div class="col-md-6">
+            <h2>Kontakt informacije za sudionike kvizova</h2>
+            <p class="text-align-justify">
+              Ukoliko imaš bilo kakva pitanja vezana za kvizove, prigovore, pohvale ili neki prijedlog, javi nam se na instagram ili telefon. 
+            </p>
+            <p class="text-align-justify">
+              Također, ako nemaš instagram, možeš prijaviti ekipu na kviz preko mobitela - samo pošalji poruku.
+            </p>
+            <ul class="icon-list ps-0">
+              <li class="text-muted d-flex align-items-start mb-1"><i class="fa-solid fa-phone" style="position: relative; top: 5px"></i>&nbsp;&nbsp;+385 91 914 6386 (Borna Stanković)</li>
+              <li class="text-muted d-flex align-items-start mb-1"><i class="fa-solid fa-phone" style="position: relative; top: 5px"></i>&nbsp;&nbsp;+385 91 895 9984 (Adrian Perić)</li>
+            
+            </ul>
+          </div>
+    
+          <div class="col-md-6">
+            <h2>Kontakt informacije za partnere i suradnju</h2>
+            <p class="text-align-justify">
+              Ukoliko ste zainteresirani biti partneri kviza u obliku sponzorstva (mi reklamiramo Vaše proizvode i usluge na kvizovima i društvenim mrežama, te neki Vaš proizvod ili uslugu dodijelimo na kvizu kao nagradu jednoj od ekipa), javite se na mail ili mobitel. 
+            </p>
+            <p class="text-align-justify">
+              Također, bit će nam drago da za Vas napravimo i provedemo interaktivni kviz (za team buildigne, vjenčanja, proslave itd.). Javite se i dogovoriti ćemo se!  
+            </p>
+            <ul class="icon-list ps-0">
+              <li class="text-muted d-flex align-items-start mb-1"><i class="fa-solid fa-phone" style="position: relative; top: 5px"></i>&nbsp;&nbsp;+385 92 2999 051 (Josip Pardon)</li>
+              <li class="text-muted d-flex align-items-start mb-1"><i class="fa-solid fa-envelope" style="position: relative; top: 5px"></i>&nbsp;&nbsp; kvizileaks.interactive@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+ 
+  <div class="container-fluid myFooter zigzag-top">
+    <footer class="">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link active px-2 text-white" onclick="changePage('pocetna')">Početna</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white" onclick="changePage('o-nama')">O nama</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white" onclick="changePage('kontakt-i-informacije')">Kontakt i informacije</a></li>
+      </ul>
+      <p class="text-center text-white">by Josip Pardon, 2023.</p>
+    </footer>
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
