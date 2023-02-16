@@ -1,0 +1,135 @@
+
+
+
+.navbar {
+    background-color: #F6C90E;
+    z-index: 100;
+  }
+  
+  .navbar-brand, .navbar {
+    font-size: 25px;
+  }
+  
+  .nav-link {
+    color: black;
+  }
+  
+  
+  /*effekti hovera na nav link*/
+  /* Hang */
+  @-webkit-keyframes hvr-hang {
+    0% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    50% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  @keyframes hvr-hang {
+    0% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    50% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  @-webkit-keyframes hvr-hang-sink {
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  @keyframes hvr-hang-sink {
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  .hvr-hang {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-hang:hover/* .hvr-hang:focus, .hvr-hang:active*/ {
+    -webkit-animation-name: hvr-hang-sink, hvr-hang;
+    animation-name: hvr-hang-sink, hvr-hang;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+  }
+  /*/////////////////////////////////////*/
+  
+  .active {
+    text-decoration: underline;
+  }
+  
+  .logo {
+    width: 75px;
+    height: 75px;
+    margin: 10px 0 19px;
+  }
+  
+  .navbar-collapse.collapse.show {
+    margin-bottom: 20px;
+  }
+  
+  .background-zig-zag {
+    z-index: -1;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    bottom: 42.5px;
+    margin-bottom: -100px;
+    /* ovo još povuče ovo odozdo prema gore*/
+  }
+
+.animate-nagrade
+{
+  background-image: linear-gradient(
+    -225deg,
+    black 0%,
+    rgb(255, 0, 0) 50%,
+    black 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+  

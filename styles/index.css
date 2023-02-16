@@ -1,173 +1,11 @@
-/*OPCENITO:*/
-.zigzag-bottom {
-  /*https://css-tricks.com/css-borders-using-masks/  size=15, angle=120deg*/
-  --mask: conic-gradient(from -60deg at bottom, #0000, #000 0deg 120deg, #0000 120deg) 50%/51.96px 100%;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-  /*border-style: solid;
-  border-width: 4px;*/
-  clip-path: inset(0 0 0.3px 0); /*https://css-tricks.com/clipping-masking-css/*/
-}
 
-.zigzag-top {
-  /*https://css-tricks.com/css-borders-using-masks/  size=15, angle=120deg*/
-  --mask: conic-gradient(from 120deg at top, #0000, #000 1deg 119deg, #0000 120deg) 50%/51.96px 100%;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-  clip-path: inset(0.5px 0 0 0);
-}
-
-
-.zigzag-top-bottom{
-  --mask: 
-    conic-gradient(from 120deg at top,#0000,#000 1deg 119deg,#0000 120deg) top/51.96px 51% repeat-x,
-    conic-gradient(from -60deg at bottom,#0000,#000 1deg 119deg,#0000 120deg) bottom/51.96px 51% repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-  clip-path: inset(0.3px 0 0.3px 0);
-}
-
-
-html, body { /*ovo nam treba da zbog animiranog slideshowa => jer inace stvori horziontalnu scroll liniju*/
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-  display: none; /*zelimo da nije nista prikazano u pocetku => ovo ce javascript maknut kada se sve učita*/
-}
-
-.hidden {
-  display: none;
-}
-
-.text-align-justify {
-  text-align: justify;
-}
-
-.text-align-center {
-  text-align: center;
-}
-
-/*----------------------------------------------------------------*/
-
-
-
-.navbar {
-  background-color: #F6C90E;
-  z-index: 100;
-}
-
-.navbar-brand, .navbar {
-  font-size: 25px;
-}
-
-.nav-link {
-  color: black;
-}
-
-
-/*effekti hovera na nav link*/
-/* Hang */
-@-webkit-keyframes hvr-hang {
-  0% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-  50% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-@keyframes hvr-hang {
-  0% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-  50% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-@-webkit-keyframes hvr-hang-sink {
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-@keyframes hvr-hang-sink {
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-}
-.hvr-hang {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-.hvr-hang:hover/* .hvr-hang:focus, .hvr-hang:active*/ {
-  -webkit-animation-name: hvr-hang-sink, hvr-hang;
-  animation-name: hvr-hang-sink, hvr-hang;
-  -webkit-animation-duration: .3s, 1.5s;
-  animation-duration: .3s, 1.5s;
-  -webkit-animation-delay: 0s, .3s;
-  animation-delay: 0s, .3s;
-  -webkit-animation-timing-function: ease-out, ease-in-out;
-  animation-timing-function: ease-out, ease-in-out;
-  -webkit-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-direction: normal, alternate;
-  animation-direction: normal, alternate;
-}
-/*/////////////////////////////////////*/
-
-
-
-
-
-.active {
-  text-decoration: underline;
-}
-
-.logo {
-  width: 75px;
-  height: 75px;
-  margin: 10px 0 19px;
-}
-
-.navbar-collapse.collapse.show {
-  margin-bottom: 20px;
-}
-
-.background-zig-zag {
-  z-index: -1;
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  position: relative;
-  bottom: 42.5px;
-  margin-bottom: -100px;
-  /* ovo još povuče ovo odozdo prema gore*/
-}
 
 
 
 #najava {
   font-size: 25px;
-  font-weight: 400;
+
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 500px) {
@@ -315,7 +153,6 @@ body {
 
 
 
-
 .scrolling-wrapper {
   overflow-x: scroll;
   overflow-y: hidden;
@@ -349,12 +186,4 @@ body {
 }
 
 
-
-.myFooter {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 50px;
-  padding-bottom: 25px;
-  background-color: #121212;
-}
 

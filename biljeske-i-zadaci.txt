@@ -1,7 +1,8 @@
 [x] dodaj da se u pozadini vrte videi kao vlak (nekak pomocu inline elementa sa absolute position - i onda mu sporo smanjujes x)
 [x] naprvi da se image slideshow beskonačno vrti ulijevo
-[ ] rjesi one crte koje se pojavljuju kod zig zag linije za neke velicine keranas - mislim da to ima veze sa losim zaokruzivanjem: 50%/51.96px
+[x] rjesi one crte koje se pojavljuju kod zig zag linije za neke velicine keranas - mislim da to ima veze sa losim zaokruzivanjem: 50%/51.96px
     - imas ovdje detaljni racun pa mozes skuzit: https://css-tricks.com/css-borders-using-masks/
+[ ] one okomite crte kod zig zag linije si rjesio tako da si stavio clip na 1px => probaj neki bolji način pronac
 [ ] napravi da su sve linije poravnate onako (tj da je desna granica i lijeva granica svih elemenata ista)
 [ ] pogledaj angelin ono gradivo o dizajnu
 [ ] kada naprviš stranicu i staviš ju na internet, posalji ju spoznoriima i pitaj ih na koji način želiš da ih izreklamiraš
@@ -18,24 +19,44 @@ stranice za dodati: unajmi nas, partneri (gdje staviš masnu reklamu), galerija
 [ ] probaj odzumirat na o-nama => skuzit ces da ne valja
 [ ] probaj odzumirat na pocetna/mini-eventi-tijekom-pauza => skuzit da snimke nisu centrirane i jedanke velicine
 [x] napravi da ništa ne prikaže dok se sve ne učita
-
+[ ] napravi da se kartice (josip, stane, ari) na o-nama prikažu uvijek nasumičnim redoslijedom
+[ ] dodaj da se sponzori prikazuju nasumičnim redoslijedom
+[ ] dodaj ispod informacija o događajima dvije snimke objava na instagramu
+[x] napravi da je body.display = none sve dok se ne učitaju elementi klase important-load => onda prikaži body, ostali elementi nek se učitaju paralelno s korisnikom
+- https://redstapler.co/how-to-check-if-all-images-are-loaded-with-javascript/
+- https://stackoverflow.com/questions/13013412/how-to-load-the-body-of-html-after-loading-all-images
+- https://www.google.com/search?q=how+to+show+page+only+after+all+images+loaded&sxsrf=AJOqlzUNZgWMOFVpM2nbeEMXELA8SbdzaA%3A1676475323339&ei=u_vsY7eUFJqLxc8P3fWBiA4&ved=0ahUKEwj33fyg7Zf9AhWaRfEDHd16AOEQ4dUDCA8&uact=5&oq=how+to+show+page+only+after+all+images+loaded&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCCEQoAEQCjIHCCEQoAEQCjIHCCEQoAEQCjoECCMQJzoLCAAQgAQQsQMQgwE6DgguEIAEELEDEMcBENEDOggIABCxAxCDAToFCC4QgAQ6CwguEIAEELEDEIMBOggIABCABBCxAzoFCAAQgAQ6CAguEIAEENQCOgsILhCABBDUAhDLAToICC4QgAQQywE6CAgAEIAEEMsBOgkIABAWEB4Q8QQ6CAgAEAgQHhANOggIIRAWEB4QHToLCCEQFhAeEPEEEB06BAghEBU6BQghEKABSgQIQRgASgQIRhgAUABYvUFgukJoAXAAeACAAdIBiAGmLJIBBzExLjMzLjGYAQCgAQHAAQE&sclient=gws-wiz-serp
+- istraži onaj lazy loading images koncept => tek se učita kada dođe u viewport 
+- možda je najbolje staviti body.opacity = 0 prije loadanja, i onda body.opacity = 1 kad se sve loada => umjesto diplay = none i display = block
+[ ] na mobu se neki videi učitavaju jako dugo, pogotovo kod sponzora
+[ ] napravi da kada stisneš link, on pošalje svoj id pomoću kojeg se skuži koju treba stranicu upalit a ne da salje string
+- https://stackoverflow.com/questions/7627161/get-id-of-element-that-called-a-function
 
 https://codepen.io/cobra_winfrey/pen/zYKGePx?editors=1100
 https://ianlunn.github.io/Hover/#effects
+
 
 za compressanje videa bez gubitka:
 https://videocandy.com/compress-video.html
 
 https://imagecompressor.com/
 
-custom domain:
+
+
+
+
+custom domain gitlab:
 https://www.youtube.com/watch?v=mPGi1IHQxFM&ab_channel=ProgrammingKnowledge
 pogledaj relevante dijelove ovog videa: https://www.youtube.com/watch?v=p1QU3kLFPdg&ab_channel=SuperSimpleDev
 show: https://www.namecheap.com/support/knowledgebase/article.aspx/10446/2208/how-do-i-link-my-domain-to-gitlab-pages/?gclid=CjwKCAiA_6yfBhBNEiwAkmXy57B4HgDUi5QHVMM-yQpbUCdM1kNohzhrIaMtvhx8wu_bJ55LIzlPlhoC4gAQAvD_BwE
 
 
 
-za hosting => 
+
+za hosting:
+gitlab ili github pages => ali čini se da se brže učitava na githubu => ili ipak ne, nekad je drastično brže na gitlabu (npr kada je fullscreen čini se brže na gitlabu)
+
+
 - https://mydataknox.com/hr/web-hosting/web-hosting-paketi?gclid=CjwKCAiAuaKfBhBtEiwAht6H73rQLN_myvHnXmdAM9HDqh2q7AxlhzUEAt9wHUyzkvHpfr8YB7nDYhoCFKgQAvD_BwE
     - mislim da ovo ispadne oko 130 kn godisnje za kvizileaks.com.hr
 

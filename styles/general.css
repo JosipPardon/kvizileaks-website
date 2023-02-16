@@ -1,0 +1,52 @@
+/*OPCENITO:*/
+.zigzag-bottom {
+    /*https://css-tricks.com/css-borders-using-masks/  size=15, angle=120deg*/
+    --mask: conic-gradient(from -60deg at bottom, #0000, #000 0deg 120deg, #0000 120deg) 50%/51.96px 100%;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    /*border-style: solid;
+    border-width: 4px;*/
+    clip-path: inset(0 0 1px 0); /*https://css-tricks.com/clipping-masking-css/*/
+  }
+  
+  .zigzag-top {
+    /*https://css-tricks.com/css-borders-using-masks/  size=15, angle=120deg*/
+    --mask: conic-gradient(from 120deg at top, #0000, #000 1deg 119deg, #0000 120deg) 50%/51.96px 100%;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    clip-path: inset(1px 0 0 0);
+  }
+  
+  
+  .zigzag-top-bottom{
+    --mask: 
+      conic-gradient(from 120deg at top,#0000,#000 1deg 119deg,#0000 120deg) top/51.96px 51% repeat-x,
+      conic-gradient(from -60deg at bottom,#0000,#000 1deg 119deg,#0000 120deg) bottom/51.96px 51% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    clip-path: inset(1px 0 1px 0);
+  }
+  
+  
+  html, body { /*ovo nam treba da zbog animiranog slideshowa => jer inace stvori horziontalnu scroll liniju*/
+      max-width: 100%;
+      overflow-x: hidden;
+  }
+  
+  body {
+    opacity: 0; /*zelimo da nije nista prikazano u pocetku => ovo ce javascript maknut kada se sve učita*/
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .text-align-justify {
+    text-align: justify;
+  }
+  
+  .text-align-center {
+    text-align: center;
+  }
+  
+  /*----------------------------------------------------------------*/

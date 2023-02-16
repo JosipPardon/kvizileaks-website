@@ -1,4 +1,7 @@
-window.addEventListener("load", (event) => {
+
+numberOfImportantLoadedElements = 0;
+
+function startSlideShowanimation() {
   console.log("page is fully loaded");
 
   let mediaSlideshowContainerChildren = document.querySelector('.media-slideshow-container').children;
@@ -46,8 +49,7 @@ window.addEventListener("load", (event) => {
      
   }, 1000/144);   
   
-  document.body.style.display = "block"; //kada se sve učita, da se prikaže body
-});
+};
 
 
 function changePage(pageName) {
@@ -72,8 +74,15 @@ function changePage(pageName) {
   let selectedNavLink = document.querySelector("#link_" + pageName);
   selectedNavLink.classList.add('active');
 
-
 }
 
+function importantLoaded() {
+  numberOfImportantLoadedElements += 1
+  let neededNumber = document.querySelectorAll('.important-load').length
+  if (numberOfImportantLoadedElements == neededNumber) {
+    startSlideShowanimation();
+    document.body.style.opacity = "1"; //kada se sve učita, da se prikaže body
+  }
+}
 
 

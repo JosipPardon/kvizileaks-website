@@ -1,0 +1,39 @@
+
+.nagrade-i-partneri-jumbotron {
+    padding-top:100px;
+    padding-bottom: 50px;
+    color: black;
+}
+
+.black-background-container {
+    background-color: #1f1f1f;
+    color: white;
+    padding-top: 50px;
+}
+
+.button-link-partner {
+    background-color: #F6C90E;
+}
+
+.video-partner {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .partner-logo {
+        width: 300px;
+    }
+}
+
+.text-partner-white-background {
+    font-weight: 400;
+}
+
+.link-partner {
+    margin-top: 5px;
+}
+
+.jumbotron-dolje {
+    padding-top: 50px;
+}
+
