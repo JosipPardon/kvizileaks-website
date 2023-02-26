@@ -19,6 +19,10 @@
     margin-bottom: 0;
 }
 
+.image-partner {
+    width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
     .partner-logo {
         width: 300px;
@@ -28,6 +32,29 @@
 .text-partner-white-background {
     font-weight: 400;
 }
+
+.amazinga-text-special {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+}
+
+.amazinga-special-container {
+    align-items: center;
+    padding-top: 0!important;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.amazinga-special-text {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}   
+
+
+
 
 .link-partner {
     margin-top: 5px;

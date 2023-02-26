@@ -21,7 +21,7 @@ stranice za dodati: unajmi nas, partneri (gdje staviš masnu reklamu), galerija
 [x] napravi da ništa ne prikaže dok se sve ne učita
 [ ] napravi da se kartice (josip, stane, ari) na o-nama prikažu uvijek nasumičnim redoslijedom
 [ ] dodaj da se sponzori prikazuju nasumičnim redoslijedom
-[ ] dodaj ispod informacija o događajima dvije snimke objava na instagramu
+[x] dodaj ispod informacija o događajima dvije snimke objava na instagramu
 [x] napravi da je body.display = none sve dok se ne učitaju elementi klase important-load => onda prikaži body, ostali elementi nek se učitaju paralelno s korisnikom
 - https://redstapler.co/how-to-check-if-all-images-are-loaded-with-javascript/
 - https://stackoverflow.com/questions/13013412/how-to-load-the-body-of-html-after-loading-all-images
@@ -31,17 +31,28 @@ stranice za dodati: unajmi nas, partneri (gdje staviš masnu reklamu), galerija
 [ ] na mobu se neki videi učitavaju jako dugo, pogotovo kod sponzora
 [ ] napravi da kada stisneš link, on pošalje svoj id pomoću kojeg se skuži koju treba stranicu upalit a ne da salje string
 - https://stackoverflow.com/questions/7627161/get-id-of-element-that-called-a-function
+[ ] linkovi u navbaru se deformiraju pri odredenoj velicini prozora => malo veća od srednje
+[ ] čini se da browser učitava isti fajl (konkretno mp4-ije) => upali network u dev toolsu i gledaj kaj se događa dok se stranica učitava
+[ ] dodaj neki loading div koji prikazuje da se stranica loada => negdje sam procitao da 4 sekunde cekanja ucitavanja stranice smanji 32% posjećivanje
+[ ] dio "Neobične stvari koje su dosad bile na našim kvizovima" je nekako preširok u edge-u, uži je u kromu
+[ ] stavi da su svi gumbi kod amazinge i blinga iste veličine i da se lijepo preljevaju prilikom promjene širine stranice
+[ ] dodaj u footer nagrade-i-partneri
+[ ] čini se da nekad browseri koristi cachirane verzije fajlova stranice (pa se prikaže starija verzija) => rješi to
+
+UBRZAVANJE UČITAVANJA STRANICE (zasad je okej - možda nema ni potrebe)
+[ ] kompresiraj sve videe i logo-e od sponzora
+[ ] https://tools.pingdom.com/#6197172781c00000 => tu ti još kaže kaj sve da napraviš kako bi ubrzao (Compress components with gzip, Add Expires headers)
+    - https://tinypng.com/
+    - https://www.textfixer.com/html/compress-html-compression.php
+    - https://docs.gitlab.com/ee/user/project/pages/introduction.html#serving-compressed-assets
+- https://www.webnots.com/how-to-improve-page-loading-speed-of-static-html-websites/
+- za compressanje videa bez gubitka:https://videocandy.com/compress-video.html
+- https://imagecompressor.com/
+
+https://www.quora.com/Which-is-the-best-platform-to-host-a-static-website-at-the-moment
 
 https://codepen.io/cobra_winfrey/pen/zYKGePx?editors=1100
 https://ianlunn.github.io/Hover/#effects
-
-
-za compressanje videa bez gubitka:
-https://videocandy.com/compress-video.html
-
-https://imagecompressor.com/
-
-
 
 
 
