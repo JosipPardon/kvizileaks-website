@@ -38,6 +38,9 @@ stranice za dodati: unajmi nas, partneri (gdje staviš masnu reklamu), galerija
 [ ] stavi da su svi gumbi kod amazinge i blinga iste veličine i da se lijepo preljevaju prilikom promjene širine stranice
 [ ] dodaj u footer nagrade-i-partneri
 [ ] čini se da nekad browseri koristi cachirane verzije fajlova stranice (pa se prikaže starija verzija) => rješi to
+[ ] sredi da se ne prikazuje "#" u URL kada klikneš neku gumb u navbaru: https://www.kvizileaks.site/#
+[ ] razmisli kako zaštiti naše brojeve i mail (sjeti se da neki npr pišu ovako: kvizileaks.interactive monkey gmail.com)
+[ ] u MI browseru se nekako broje drugačije učitaju, kao da je sve u dark mode-u => napravi da browseri ne mogu dirati boje nego moraju točno te prikazati
 
 UBRZAVANJE UČITAVANJA STRANICE (zasad je okej - možda nema ni potrebe)
 [ ] kompresiraj sve videe i logo-e od sponzora
