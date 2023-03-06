@@ -42,6 +42,9 @@ stranice za dodati: unajmi nas, partneri (gdje staviš masnu reklamu), galerija
 [ ] razmisli kako zaštiti naše brojeve i mail (sjeti se da neki npr pišu ovako: kvizileaks.interactive monkey gmail.com)
 [ ] u MI browseru se nekako broje drugačije učitaju, kao da je sve u dark mode-u => napravi da browseri ne mogu dirati boje nego moraju točno te prikazati
 [ ] elena je rekla da se prebrzo vrti slideshow na mobitelu
+[ ] na nekim veličinama (uzak ekran) je preveliki razmak između "interaktivni kviz" i ovog dolje zig zag bordera
+[ ] na tabletu vertikalno kada nije upaljen desktop mod, navbar linkovi se izdeformiraju
+[ ] na instagramu kada se otvori link "interaktivni kviz" nije centriran, nego je neko prema desno
 
 UBRZAVANJE UČITAVANJA STRANICE (zasad je okej - možda nema ni potrebe)
 [ ] kompresiraj sve videe i logo-e od sponzora
