@@ -45,6 +45,8 @@ stranice za dodati: unajmi nas, partneri (gdje staviš masnu reklamu), galerija
 [ ] na nekim veličinama (uzak ekran) je preveliki razmak između "interaktivni kviz" i ovog dolje zig zag bordera
 [ ] na tabletu vertikalno kada nije upaljen desktop mod, navbar linkovi se izdeformiraju
 [ ] na instagramu kada se otvori link "interaktivni kviz" nije centriran, nego je neko prema desno
+[ ] u kada googlaš kvizileaks, pojavi se naša stranica i onda ima ružan natpis ispod
+[ ] napraviti da kada se googla "interaktivni kviz" da izbaci kvizileaks
 
 UBRZAVANJE UČITAVANJA STRANICE (zasad je okej - možda nema ni potrebe)
 [ ] kompresiraj sve videe i logo-e od sponzora
@@ -55,6 +57,7 @@ UBRZAVANJE UČITAVANJA STRANICE (zasad je okej - možda nema ni potrebe)
 - https://www.webnots.com/how-to-improve-page-loading-speed-of-static-html-websites/
 - za compressanje videa bez gubitka:https://videocandy.com/compress-video.html
 - https://imagecompressor.com/
+- možda staviti na neki brzi hosting service
 
 https://www.quora.com/Which-is-the-best-platform-to-host-a-static-website-at-the-moment
 

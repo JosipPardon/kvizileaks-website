@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clicker Game</title>
+	<style>
+		body {
+			font-size: 2rem;
+			text-align: center;
+			height: 500px;
+		}
+
+		#box {
+			width: 25rem;
+			height: 25rem;
+			background-color: red;
+			margin: 50px auto;
+			border-radius: 10px;
+			cursor: pointer;
+            
+		}
+
+		#counter {
+			margin-bottom: 20px;
+		}
+
+        #hidden-message {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .invisible {
+            opacity: 0.0;
+        }
+
+		.hint {
+			color: navy;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1 id="title">Klikni me!</h1>
+	<div id="box">
+        <div id="hidden-message" class="invisible">
+			md ën margatsni ën inogrëd e nejgijgrëp ?ćinaružam ćilrb anavi rukedv ak tiv nilic ën
+		</div>
+    </div>
+	<h1 id="counter">Clicks: xxxx</h1>
+	<hr>
+	<h4 class="hint hint-level-1 invisible">Hint: Link je show.</h4>
+	<h4 class="hint hint-level-2 invisible">Hint: Moonwalk je hodanje unazad. Izumio ga je Michael Jackson.</h4>
+    
+
+	<script>
+		let clicks = 37;
+        const title = document.getElementById("title");
+		const box = document.getElementById("box");
+		const counter = document.getElementById("counter");
+        const hiddenMessage = document.getElementById("hidden-message");
+
+        counter.innerHTML = "Broj klikova: " + clicks;
+
+		box.addEventListener("click", () => {
+			clicks--;
+			counter.innerHTML = "Broj klikova: " + clicks;
+		});
+
+        title.addEventListener("click", () => {
+			if (clicks == 29) {
+                hiddenMessage.classList.remove("invisible");
+            }
+			console.log("jej")
+		});
+
+		setTimeout(function() {
+			const hintElement = document.querySelector('.hint-level-1');
+			hintElement.classList.remove("invisible");
+		}, 1000 * 60);
+		setTimeout(function() {
+			const hintElement = document.querySelector('.hint-level-2');
+			hintElement.classList.remove("invisible");
+		}, 1000 * 120);
+
+	</script>
+</body>
+</html>
