@@ -33,7 +33,7 @@
       overflow-x: hidden;
   }
   
-  body {
+  .website-content {
     opacity: 0; /*zelimo da nije nista prikazano u pocetku => ovo ce javascript maknut kada se sve učita*/
   }
   
@@ -50,3 +50,38 @@
   }
   
   /*----------------------------------------------------------------*/
+
+
+  /*PROGRESS BAR*/
+
+  .loading-element {
+    opacity: 0.0;
+  }
+
+  .progress-container {
+    width: 100%;
+    height: 100%;
+    padding: 30%;
+    padding-top: 20%;
+    text-align: center;
+    
+  }
+  @media only screen and (max-width: 800px) {
+    .progress-container {
+      padding: 15%; 
+    }
+  }
+
+  .progress-bar-border {
+    width: 100%;
+    height: 30px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: black;
+  }
+
+  .progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #F6C90E;
+  }

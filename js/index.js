@@ -1,5 +1,36 @@
 
 numberOfImportantLoadedElements = 0;
+animateLoad = true;
+loadingProgress = 0;
+let progressBar = document.querySelector('.progress-bar')
+
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+
+let loadingInterval = setInterval(function () {
+  loadingProgress += getRandomArbitrary(0, (100 - loadingProgress)*0.5);
+  progressBar.style.width = loadingProgress + '%';
+
+}, 1000);
+
+setTimeout(function () {
+  /*
+    ovo napravi da se prikaže loadanje samo ako se stranica učitava dulje od 250ms
+  */
+  let loadingElement = document.querySelector('.loading-element')
+  loadingElement.style.opacity = "1";
+}, 250); 
+
+setTimeout(function () {
+  let loadingText = document.querySelector('.loading-text')
+  loadingText.innerHTML = "Konekcija je nažalost slaba u ovom trenutku..."
+
+}, 4500);
+
+
 
 function startSlideShowanimation() {
   console.log("page is fully loaded");
@@ -79,10 +110,19 @@ function changePage(pageName) {
 function importantLoaded() {
   numberOfImportantLoadedElements += 1
   let neededNumber = document.querySelectorAll('.important-load').length
+  let websiteContent = document.querySelector('.website-content')
+  let loadingElement = document.querySelector('.loading-element')
   if (numberOfImportantLoadedElements == neededNumber) {
+    progressBar.style.width = '100%';
     startSlideShowanimation();
-    document.body.style.opacity = "1"; //kada se sve učita, da se prikaže body
+    clearInterval(loadingInterval);
+    loadingElement.style.display = 'none'
+    websiteContent.style.opacity = "1"; //kada se sve učita, da se prikaže content
+
   }
 }
+
+
+
 
 
