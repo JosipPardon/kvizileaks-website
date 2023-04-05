@@ -25,10 +25,16 @@ setTimeout(function () {
 }, 250); 
 
 setTimeout(function () {
-  let loadingText = document.querySelector('.loading-text')
+  let loadingText = document.querySelector('#loading-1')
   loadingText.innerHTML = "Konekcija je nažalost slaba u ovom trenutku..."
 
 }, 4500);
+
+setTimeout(function () {
+  let loadingText = document.querySelector('#loading-2')
+  loadingText.innerHTML = "Probaj osvježiti/refreshati stranicu."
+
+}, 9000);
 
 
 
