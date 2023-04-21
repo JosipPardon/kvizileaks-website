@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Tower of Hanoi</title>
+  <link rel="stylesheet" href="riddles_stuff/hohoho/css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="riddles_stuff/hohoho/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="moves" style="display: none">MOVES: 0</div>
+  </header>
+  <h2 class="hint1" style="color: blue; display: none">Hint: hanoi</h2>
+  <h2 class="hint2" style="color: blue; display: none">Hint: tower</h2>
+  <h2 class="secret" style="color: white"></h2>
+  <div class="container">
+    
+    <div class="col c1"></div>
+    <div class="col c2">
+      <!-- <div class="gameOver">YOU WIN!</div> -->
+      
+    </div>
+    <div class="col c3"></div>
+  </div>
+  <footer>
+    <a id="reset" href="#" onclick="startHints()">START</a>
+  </footer>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="riddles_stuff/hohoho/main.js"></script>
+  <script>
+    function startHints() {
+      setTimeout(function() {
+			const hintElement = document.querySelector('.hint1');
+			hintElement.style.display = "block"
+      }, 1000 * 60);
+      setTimeout(function() {
+        const hintElement = document.querySelector('.hint2');
+        hintElement.style.display = "block"
+      }, 1000 * 120);
+    }
+   
+  </script>
+</body>
+</html>

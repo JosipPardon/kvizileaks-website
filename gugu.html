@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zagonetka</title>
+	<style>
+		body {
+			font-size: 2rem;
+			text-align: left;
+            text-align: center;
+		}
+
+		.hint {
+			color: navy;
+			text-align: center;
+		}
+
+        h1 {
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            border: black 1px;
+            padding: 10px;
+        }
+        .grid-item {
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+
+        }
+
+        .image {
+            width: 90%;
+        }
+	</style>
+</head>
+<body>
+
+	
+    <h1>Utxfqonyj sfr sf nsxyflwfr utwzpz ptoj ltinsj oj wtijsf fzytwnhf Nafsf Gwqnh Rfezwfsnh</h1>
+    <hr>
+    <h4 class="hint hint-level-1" style="display: none">Hint: Zar i ti sine B...</h4>
+	<h4 class="hint hint-level-2" style="display: none">Hint: On je smislio način šifriranja hehe</h4>	
+    <hr>
+    <div class="grid-container">
+        <div class="grid-item"><img class="bulb image" src="https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg" alt="Girl in a jacket"></div>
+        <div class="grid-item"><h1>English alphabet</h1></div>
+        <div class="grid-item"><h1>5</h1></div>
+    </div>
+
+	
+    
+
+	<script>
+
+		setTimeout(function() {
+			const hintElement = document.querySelector('.hint-level-1');
+			hintElement.style.display = "block";
+		}, 1000 * 60);
+
+		setTimeout(function() {
+			const hintElement = document.querySelector('.hint-level-2');
+			hintElement.style.display = "block";
+            console.log("jeej")
+		}, 1000 * 120);
+
+	</script>
+</body>
+</html>
