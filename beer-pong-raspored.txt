@@ -1,16 +1,65 @@
-Trinkets - Bakrena Braća - 1
-Trinkets - Bakrena Braća - 2
-Trinkets - Bakrena Braća - 3
-Trinkets - Bakrena Braća - 4
-Trinkets - Bakrena Braća - 1
-Trinkets - Bakrena Braća - 2
-Trinkets - Bakrena Braća - 3
-Trinkets - Bakrena Braća - 4
-Trinkets - Bakrena Braća - 1
-Trinkets - Bakrena Braća - 2
-Trinkets - Bakrena Braća - 3
-Trinkets - Bakrena Braća - 4
-Trinkets - Bakrena Braća - 1
-Trinkets - Bakrena Braća - 2
-Trinkets - Bakrena Braća - 3
-Trinkets - Bakrena Braća - 4
+Trinkets-Bakrena Braća 20.00 s1
+mmm da-Splash braća 20.00 s2
+
+Mrzla-Udne tuljice 20.00 s3
+Vadičep-Ne odvajamo smeće 20.00 s4
+
+Duboko grlo-Pongeri 20.07 s1
+Podroom-KT K 20.07 s2
+
+M3-Skandal 20.07 s3
+Durant Durant-Posvuduše 20.07 s4
+
+Propale studentice-Snajperi 20.14 s1
+Lepe Šejle-Romeo i romkinja 20.14 s2
+
+Bessi-Slepe do bola 20.14 s3
+Afroamerikanci u Parizu-Coffee with cream 20.14 s4
+
+Tralavci-Kraljevi vikenda 20.21 s1
+eXOtične-Bivši 20.21 s2
+
+------------
+
+mmm da-Trinkets 20.21 s3
+Bakrena Braća-Splash braća 20.21 s4
+
+Vadičep-Mrzla 20.28 s1
+Udne tuljice-Ne odvajamo smeće 20.28 s2
+
+Podroom-Duboko grlo 20.28 s3
+Pongeri-KT K 20.28 s4
+
+Durant Durant-M3 20.35 s1
+Skandal-Posvuduše 20.35 s2
+
+Lepe Šejle-Propale studentice 20.35 s3
+Snajperi-Romeo i romkinja 20.35 s4
+
+Afroamerikanci u Parizu-Bessi 20.42 s1
+Slepe do bola-Coffee with cream 20.42 s2
+
+eXOtične-Tralavci 20.42 s3
+Kraljevi vikenda-Bivši 20.42 s4
+
+--------------
+Trinkets-Splash braća 20.49 s1
+mmm da-Bakrena Braća 20.49 s2
+
+Mrzla-Ne odvajamo smeće 20.49 s3
+Vadičep-Udne tuljice 20.49 s4
+
+Duboko grlo-KT K 20.56 s1
+Podroom-Pongeri 20.56 s2
+
+M3-Posvuduše 20.56 s3
+Durant Durant-Skandal 20.56 s4
+
+Propale studentice-Romeo i romkinja 21.03 s1
+Lepe Šejle-Snajperi 21.03 s2
+
+Bessi-Coffee with cream 21.03 s3
+Afroamerikanci u Parizu-Slepe do bola 21.03 s4
+
+Tralavci-Bivši 21.10 s1
+eXOtične-Kraljevi vikenda 21.10 s2

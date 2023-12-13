@@ -47,6 +47,8 @@ stranice za dodati: unajmi nas, partneri (gdje staviš masnu reklamu), galerija
 [ ] na instagramu kada se otvori link "interaktivni kviz" nije centriran, nego je neko prema desno
 [ ] u kada googlaš kvizileaks, pojavi se naša stranica i onda ima ružan natpis ispod
 [ ] napraviti da kada se googla "interaktivni kviz" da izbaci kvizileaks
+[ ] stavi nove videe objava na stranicu informacije i obavijesti => ima sa DA kviza nekih super videa
+[ ] dodaj "Posebne suradnje" (ili tako nešto) i ondje stavi da je kvizileaks bio na stem gamesu i DA festivalu
 
 UBRZAVANJE UČITAVANJA STRANICE (zasad je okej - možda nema ni potrebe)
 [ ] kompresiraj sve videe i logo-e od sponzora

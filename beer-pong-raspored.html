@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+      body {background-color: white}
+      h1   {color: blue;}
+      p    {color: red;}
+    </style>
+  </head>
+  <body>
+    <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center main-container">
+      <!-- <ul class="list-group">
+        <li class="list-group-item active" aria-current="true">An active item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/public-google-sheets-parser@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+
+      let playingSpot_matches = {};
+      
+      fetch('https://www.kvizileaks.com/beer-pong-raspored.txt')
+      .then(response => response.text())
+      .then(data => {
+        // Process the text data here
+        const lines = data.split('\n');
+        //console.log(lines)
+        lines.forEach(line => {
+
+          if (!(line.startsWith('--') || line.startsWith('#') || line === '')) {
+            //console.log(line)
+            splitedLine = line.slice(0, -1).split("-")
+            team1 = splitedLine[0].trim()
+            team2 = splitedLine[1].trim()
+            playingSpot = parseInt(splitedLine[2].trim())
+            
+            if (!(playingSpot in playingSpot_matches)) {
+              playingSpot_matches[playingSpot] = []
+              
+            }
+
+            playingSpot_matches[playingSpot].push([team1, team2])
+
+            
+
+          }
+        
+        });
+
+        console.log(playingSpot_matches)
+        let mainContainer = document.querySelector(".main-container")
+        
+
+        for (const [key, value] of Object.entries(playingSpot_matches)) {
+          mainContainer.appendChild(createElementFromHTML(`
+            <ul class="list-group" id="spot${key}-container">
+              <li class="list-group-item active" aria-current="true" id="spot${key}-grouptitle">Stol ${key}</li>
+            </ul>`
+          ))
+          let currentSpotContainer = document.querySelector(`#spot${key}-container`)
+          let matchPairsCounter = 1;
+          for (matchPair of playingSpot_matches[key]) {
+            currentSpotContainer.appendChild(createElementFromHTML(`
+              <li class="list-group-item" id="spot${key}-match${matchPairsCounter}">${matchPair[0]} - ${matchPair[1]}</li>
+            `))
+            matchPairsCounter++;
+          }
+        }
+
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+
+      function createElementFromHTML(htmlString) {
+        var div = document.createElement('div');
+        div.innerHTML = htmlString.trim();
+
+        // Change this to div.childNodes to support multiple top-level nodes.
+        return div.firstChild;
+      }
+
+
+      setInterval(function() {
+        //https://www.npmjs.com/package/public-google-sheets-parser
+        /* const spreadsheetId = '1Nm988U5BRL9hPhGfHQLauVy9pyZXVUC58rIIgtCxF3U'
+        const parser = new PublicGoogleSheetsParser()
+        parser.parse(spreadsheetId, 'OnlyNewOnes').then((items) => {
+          console.log(items)
+        })  */
+
+        const spreadsheetId = '10WDbAPAY7Xl5DT36VuMheTPTTpqx9x0C5sDCnh4BGps'
+        const parser = new PublicGoogleSheetsParser()
+        parser.parse(spreadsheetId).then((items) => {
+          // items should be [{ a: 1, b: 2, c: 3 },{ a: 4, b: 5, c: 6 },{ a: 7, b: 8, c: 9 }]
+        })
+        /* var spreadsheetId = "1Nm988U5BRL9hPhGfHQLauVy9pyZXVUC58rIIgtCxF3U";
+        var sheetId = "826723270";
+        var url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json&sheet=${sheetId}`;
+
+        fetch(url)
+          .then(response => response.text())
+          .then(data => {
+            // Clean up the response to extract JSON
+            var json = data.match(/(?<=\n).*(?=\);)/g);
+            var jsonData = JSON.parse(json);
+
+            // Access the data here
+            var rows = jsonData.table.rows;
+            var headers = rows[0].c.map(cell => cell.v);
+
+            // Loop through rows
+            for (var i = 1; i < rows.length; i++) {
+              var row = rows[i].c;
+              
+              // Loop through columns in each row
+              for (var j = 0; j < row.length; j++) {
+                var header = headers[j];
+                var cell = row[j].v;
+                console.log(header + ": " + cell);
+              }
+            }
+          })
+          .catch(error => {
+            // Handle any errors
+            console.error(error);
+          }); */
+
+      }, 100)
+
+      function getJson(id,gid){
+        var txt = UrlFetchApp.fetch(`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:json&tq&gid=${gid}`).getContentText();
+        var jsonString = txt.match(/(?<="table":).*(?=}\);)/g)[0]
+        var json = JSON.parse(jsonString)
+        return(json)
+      }
+
+      //try this: https://stackoverflow.com/questions/70902197/accessing-a-public-google-sheets-data-directly-from-client-side-javascript
+      function getEndpointJson() {
+        var id = '1n-rjSYb63Z2jySS3-M0BQ78vu8DTPOjG-SZM4i8IxXI';
+        var gid = '0';
+        var txt = UrlFetchApp.fetch(`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:json&tq&gid=${gid}`).getContentText();
+        var jsonString = txt.match(/(?<="table":).*(?=}\);)/g)[0]
+        var json = JSON.parse(jsonString)
+        var table = []
+        var row = []
+        json.cols.forEach(colonne => row.push(colonne.label))
+        table.push(row)
+        json.rows.forEach(r => {
+          var row = []
+          r.c.forEach(cel => {
+              try{var value = cel.f ? cel.f : cel.v}
+              catch(e){var value = ''}
+              row.push(value)
+            }
+          )
+          table.push(row)
+          }
+        )
+        return (table)
+      }
+
+
+    </script>
+  </body>
+</html>
+
+
+
